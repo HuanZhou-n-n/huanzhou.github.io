@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 
@@ -10,19 +8,30 @@ This homepage is adapted from https://people DOT eecs DOT berkeley DOT edu/$~$st
 
 <head>
   <title>Huan Zhou</title>
-  <link rel="icon" href="images/ibmpos_blue.png">
-  <!-- <img src="photo-uoftas.png"> -->
+  <!--<link rel="icon" href="images/ibmpos_blue.png">
+   <img src="photo-uoftas.png"> -->
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="css/styles.css" type="text/css"/>
 </head>
 
-
-
 <body>
-  <main role="main">
-    <div class="container">
-        <header><img src="images/huan.jpg" width="125" border="1" align="right">
+  <main role="main" >
+    <div class="container" style="width:55%;margin: 0 auto; background-color: rgba(255,255,255,0.9);padding:10px" >
+	<audio id="player" autoplay>
+        <source src="images/bgm.mp3" type="audio/mp3">
+    </audio>
+	<script>
+		document.addEventListener('click', musicPlay);
+		function musicPlay(type) {
+			var audio=document.getElementById('player');
+			if(audio.paused)
+				audio.play();
+			else audio.pause();
+		}
+	</script>
+        <header>
+		<img src="images/huan.png" width="100" align="right" style="position:absolute;z-index:5;right:25%;top:3%">
         
         <h2>Huan Zhou</h2> 
         
@@ -48,14 +57,11 @@ This homepage is adapted from https://people DOT eecs DOT berkeley DOT edu/$~$st
       <p>
         I earned my bachelor's degree from Sichuan Normal University in 2013.
       </p>
-      
-      
 
-      <h2>Research Interests</h2>
+      <h2>Interests</h2>
        My expertise lies in <b>database management systems</b> and <b>Data-Driven Computational Education</b>, specifically transaction processing, logging and recovery, concurrency control and learning evaluation. 
 
-      <h2>Project Experience</h2>
-
+      <h2>Experience</h2>
       <p>
       I am enthusiastic to integrate research into real-world systems. Right now, I am responsible for designing and developing the <b>Graduate Intelligence Service Platform (GISP)</b> of ECNU <a href="http://portal.ecnu.edu.cn/">GISP</a> and a <b>analysis and monitoring big data platform</b>. 
       Before that, I was a developer of a <b>distributed transactional database system</b> <a href="https://github.com/daseECNU/CEDAR">CEDAR</a>. Its key technologies were validated to be effective by several enterprises, including Bank of Communication, Haier, and Jiangsu Mobile.
@@ -160,8 +166,6 @@ This homepage is adapted from https://people DOT eecs DOT berkeley DOT edu/$~$st
       <p>
       Last update: Jan. 2020
       </p>
-      <div>
-
     </div><!--/container-->
   </main><!--@main-->
 </body>
